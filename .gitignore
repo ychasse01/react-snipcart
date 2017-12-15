@@ -1,0 +1,31 @@
+# System generated files
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Development/Environment
+.env
+.env.*
+dist
+.next
+json
+public
+.cache
+
+# Temporary
+temp
+temp-*
+
+add-to-cart.js
+cart-has-qty.js
+cart-qty.js
+dirty-check-cart-qty.js
+index.js
+open-cart.js
+!src/*.js
