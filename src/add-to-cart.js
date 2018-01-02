@@ -14,7 +14,7 @@ export default class addToCart extends React.Component{
 	render(){
 		let dataAttrs = {}
 		for(let i in this.props.data){
-			dataAttrs[`data-${i}`] = this.props.data
+			dataAttrs[`data-${i}`] = this.props.data[i]
 		}
 		return(
 			<div onClick={this.addToCart} {...dataAttrs}>
