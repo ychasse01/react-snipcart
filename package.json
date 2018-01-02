@@ -1,6 +1,6 @@
 {
   "name": "react-snipcart",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A Gatsby plugin ecommerce with Snipcart.",
   "keywords": [
     "react",
@@ -15,7 +15,7 @@
   },
   "author": "Kennedy Rose <krose@escaladesports.com>",
   "scripts": {
-	  "prepublishOnly": "npm run build",
+    "prepublishOnly": "npm run build",
     "lint": "standard",
     "build": "babel src --out-dir ."
   },
