@@ -15,6 +15,7 @@
   },
   "author": "Kennedy Rose <krose@escaladesports.com>",
   "scripts": {
+	  "prepublishOnly": "npm run build",
     "lint": "standard",
     "build": "babel src --out-dir ."
   },
