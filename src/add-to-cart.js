@@ -7,7 +7,14 @@ export default class addToCart extends React.Component{
 	}
 	addToCart(e){
 		if(window.Snipcart){
-			window.Snipcart.api.items.add(this.props.data)
+			window.Snipcart.api.items.add(Object.assign({
+					autopop: false
+				}, this.props.data))
+				.then(item => {
+					if(this.props.data.openCart){
+						window.Snipcart.api.modal.show()
+					}
+				})
 		}
 	}
 	render(){
