@@ -5,14 +5,19 @@ export default class addToCart extends React.Component{
 		super(props)
 		this.addToCart = this.addToCart.bind(this)
 	}
-	addToCart(){
+	addToCart(e){
+		e.preventDefault()
 		if(window.Snipcart){
 			window.Snipcart.api.items.add(this.props.data)
 		}
 	}
 	render(){
+		let dataAttrs = {}
+		for(let i in this.props.data){
+			dataAttrs[`data-${i}`] = this.props.data
+		}
 		return(
-			<div onClick={this.addToCart}>
+			<div onClick={this.addToCart} {...dataAttrs}>
 				{this.props.children}
 			</div>
 		)
